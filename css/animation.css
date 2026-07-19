@@ -1,0 +1,211 @@
+/* ==========================
+   KEYFRAMES
+========================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes starsMove {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes heartFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-250px) scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* ==========================
+   LOADING
+========================== */
+
+#loading {
+  animation: fade 0.6s;
+}
+
+/* ==========================
+   INTRO
+========================== */
+
+.intro-content h1 {
+  animation: fadeUp 1s;
+}
+
+.intro-content p {
+  animation: fadeUp 1.3s;
+}
+
+#startBtn {
+  animation: fadeUp 1.6s;
+  transition: 0.3s;
+}
+
+#startBtn:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================
+   STARS
+========================== */
+
+.stars {
+  animation: starsMove 12s linear infinite;
+}
+
+/* ==========================
+   ENVELOPE
+========================== */
+
+#envelope {
+  animation:
+    floating 3s ease-in-out infinite,
+    zoom 1s;
+
+  transition: 0.4s;
+}
+
+#envelope:hover {
+  transform: scale(1.08);
+}
+
+/* ==========================
+   LETTER
+========================== */
+
+.letter-paper {
+  animation: fadeUp 0.8s;
+}
+
+/* ==========================
+   TIMELINE
+========================== */
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.7s;
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery-container img {
+  transition: 0.35s;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* ==========================
+   LOVE CARD
+========================== */
+
+.card {
+  transition: 0.8s;
+}
+
+.card:hover {
+  transform: rotateY(180deg) scale(1.03);
+}
+
+/* ==========================
+   QUIZ
+========================== */
+
+.answer {
+  transition: 0.3s;
+}
+
+.answer:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================
+   HUG BUTTON
+========================== */
+
+#hugBtn {
+  animation: pulse 2s infinite;
+}
+
+/* ==========================
+   HEART
+========================== */
+
+.heart {
+  position: fixed;
+  font-size: 24px;
+  pointer-events: none;
+  animation: heartFloat 3s linear forwards;
+  z-index: 9999;
+}
